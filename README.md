@@ -16,13 +16,20 @@ A production-grade TypeScript wrapper for the StreamTape API, providing a clean 
 ## Installation
 
 ```bash
-bun add streamtape-api-wrapper
+# Using npm
+npm install @pixam/streamtape
+
+# Using Yarn
+yarn add @pixam/streamtape
+
+# Using Bun
+bun add @pixam/streamtape
 ```
 
 ## Quick Start
 
 ```typescript
-import { StreamTape } from 'streamtape-api-wrapper';
+import { StreamTape } from '@pixam/streamtape';
 
 // Initialize the client
 const client = new StreamTape({
@@ -124,7 +131,7 @@ import {
   NotFoundError,
   ApiRequestError,
   NetworkError
-} from 'streamtape-api-wrapper';
+} from '@pixam/streamtape';
 
 try {
   await client.file.getFileInfo('invalid-id');
@@ -144,7 +151,7 @@ try {
 The wrapper is written in TypeScript and provides comprehensive type definitions for all API responses and parameters:
 
 ```typescript
-import { AccountInfo, FileInfo, DownloadLink } from 'streamtape-api-wrapper';
+import { AccountInfo, FileInfo, DownloadLink } from '@pixam/streamtape';
 
 async function downloadFile(fileId: string): Promise<DownloadLink> {
   const fileInfo: FileInfo = await client.file.getFileInfo(fileId);
