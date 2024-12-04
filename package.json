@@ -1,0 +1,60 @@
+{
+  "name": "@pixam/streamtape",
+  "version": "1.0.0",
+  "description": "A production-grade TypeScript wrapper for the StreamTape API",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "bun test",
+    "prepare": "bun run build",
+    "prepublishOnly": "bun run lint && bun run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "streamtape",
+    "api",
+    "wrapper",
+    "video",
+    "streaming",
+    "typescript"
+  ],
+  "author": "Pixam Studio",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "form-data": "^4.0.0",
+    "zod": "^3.22.4",
+    "@types/node": "^20.10.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixamstudio/streamtape-api-wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pixamstudio/streamtape-api-wrapper/issues"
+  },
+  "homepage": "https://github.com/pixamstudio/streamtape-api-wrapper#readme"
+}
